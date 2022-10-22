@@ -12,6 +12,7 @@ a {
     --background-color: black;
     --gradient: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
     --gradient-f: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+    --color-p: #3c4652;
 }
 body {
     font-family: sans-serif;
@@ -158,7 +159,7 @@ header button:hover {
 #home .schet .numbers .square {
     text-align: center;
     background: #080b0e;
-    color: #3c4652;
+    color: var(--color-p);
     padding: 1em;
 }
 #home .schet .numbers .square h2 {
@@ -305,6 +306,287 @@ header button:hover {
     background: var(--gradient-f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#section-2 .start {
+    width: 80%;
+    height: 60%;
+    display: grid;
+    grid-template-rows: 20% 20% 1fr;
+}
+#section-2 .start .head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#section-2 .start .head img {
+    height: 100%;
+    width: auto;
+}
+#section-2 .start .head h2 {
+    font-size: 2em;
+}
+#section-2 .start > p {
+    width: 30%;
+    color: var(--color-p);
+    line-height: 1.5em;
+    padding-left: 2em;
+}
+#section-2 .start .info-graphic {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+#section-2 .start .info-graphic .box {
+    display: grid;
+    grid-template-rows: 25% 35% 40%;
+}
+#section-2 .start .info-graphic .box h3 {
+    font-size: 2em;
+}
+#section-2 .start .info-graphic .box .line {
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-f);
+}
+#section-2 .start .info-graphic .box:nth-child(2) .line {
+    transform: scaleY(0.75);
+}
+#section-2 .start .info-graphic .box:nth-child(3) .line {
+    transform: scaleY(0.5);
+}
+#section-2 .start .info-graphic .box:nth-child(4) .line {
+    transform: scaleY(0.25);
+}
+#section-2 .start .info-graphic .box p {
+    color: var(--color-p);
+    padding: 2em 1.7em 0 0;
+}
+
+#section-3 .advantages {
+    width: 70%;
+    height: 80%;
+    display: grid;
+    grid-template-rows: 30% 1fr;
+}
+#section-3 .advantages h2 {
+    font-size: 48px;
+    text-align: center;
+}
+#section-3 .advantages .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3em;
+}
+#section-3 .advantages .container .box {
+    display: grid;
+    grid-template-rows: 35% 20% 35%;
+    justify-items: center;
+}
+#section-3 .advantages .container .box h3 {
+    font-size: 24px;
+    text-align: center;
+    padding: 0 1em;
+}
+#section-3 .advantages .container .box p {
+    color: var(--color-p);
+    text-align: center;
+    padding: 0 2em;
+}
+
+#section-4 .partners {
+    width: 70%;
+    height: 60%;
+    display: grid;
+    grid-template-rows: 40% 1fr;
+}
+#section-4 .partners .head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#section-4 .partners .head h2 {
+    font-size: 2em;
+}
+#section-4 .partners .grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+#section-4 .partners .grid .image {
+    padding: 2em 4em;
+    border-right: 1px solid var(--color-p);
+    border-bottom: 1px solid var(--color-p);
+}
+#section-4 .partners .grid .image:nth-child(4),
+#section-4 .partners .grid .image:last-child {
+    border-right: none;
+}
+#section-4 .partners .grid .image:nth-child(n + 5) {
+    border-bottom: none;
+}
+
+#section-5 {
+    height: 150vh;
+}
+#section-5 .program {
+    position: relative;
+    width: 60%;
+    height: 70%;
+    display: grid;
+    grid-template-rows: 10% 10% 15% 1fr;
+    text-align: center;
+}
+#section-5 .program img {
+    position: relative;
+    left: 45%;
+}
+#section-5 .program h2 {
+    font-size: 3rem;
+}
+#section-5 .program > p {
+    font-size: 1rem;
+    color: var(--color-p);
+    padding: 0 30%;
+    line-height: 1.5em;
+}
+#section-5 .program .grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 45% 1fr 45%;
+}
+#section-5 .program .grid .line {
+    position: relative;
+    left: 45%;
+    width: 6px;
+    height: 100%;
+    background: var(--gradient-f);
+}
+#section-5 .program .grid .left {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+#section-5 .program .grid .left .program-week {
+    position: relative;
+    display: grid;
+    grid-template-rows: 30% 1fr;
+}
+#section-5 .program .grid .left .program-week p.week {
+    position: relative;
+    top: 1em;
+    text-align: end;
+    color: var(--color-p);
+}
+#section-5 .program .grid .left .program-week p.text {
+    position: relative;
+    text-align: end;
+    padding-left: 50%;
+}
+#section-5 .program .grid .left .program-week p.text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 30px;
+    height: 1px;
+    background: var(--color-p);
+    z-index: -1;
+}
+#section-5 .program .grid .right {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    top: 10%;
+    grid-gap: 3em;
+}
+#section-5 .program .grid .right .program-week {
+    position: relative;
+    display: grid;
+    grid-template-rows: 30% 30%;
+}
+#section-5 .program .grid .right .program-week:nth-child(2){
+    top: -30%;
+}
+#section-5 .program .grid .right .program-week:nth-child(3) {
+    top: -70%;
+}
+#section-5 .program .grid .right .program-week p.week {
+    position: relative;
+    top: 1em;
+    text-align: start;
+    color: var(--color-p);
+}
+#section-5 .program .grid .right .program-week p.text {
+    position: relative;
+    text-align: start;
+    padding-right: 50%;
+}
+#section-5 .program .grid .right .program-week p.text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -11.5%;
+    width: 30px;
+    height: 1px;
+    background: var(--color-p);
+    z-index: -1;
+}
+
+#teachers .teachers {
+    width: 80%;
+    height: 60%;
+    display: grid;
+    grid-template-rows: 40% 1fr;
+}
+#teachers .teachers  .head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#teachers .teachers  .head h2 {
+    font-size: 3rem;
+    margin-left: 1em;
+}
+#teachers .teachers .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    grid-gap: 5em;
+}
+#teachers .teachers .container .teacher {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 40% fr 1fr 1fr;
+}
+#teachers .teachers .container .teacher img {
+    transition: 1s;
+}
+#teachers .teachers .container .teacher p {
+    color: var(--color-p);
+}
+#teachers .teachers .container .teacher button {
+    position: relative;
+    left: 7%;
+    width: 80%;
+    height: 38px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+}
+#teachers .teachers .container .teacher:hover > img {
+    transition: 1s;
+    transform: scale(1.2);
+}
+#teachers .teachers .container .teacher h2:hover {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#teachers .teachers .container .teacher button:hover {
+    background: var(--gradient-f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 1px solid rgb(115, 24, 201);
 }
 
 /*    медиа запросы     */
